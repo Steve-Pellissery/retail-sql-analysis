@@ -1,41 +1,55 @@
-# Retail Revenue & Customer Behavior Analysis (PostgreSQL)
+# Retail Revenue & Customer Intelligence Analysis (PostgreSQL)
 
 ## 📌 Objective
-Analyze retail transaction data to evaluate revenue performance, customer contribution, and product-level sales insights using SQL.
+Conduct revenue and customer performance analysis on a large-scale retail transaction dataset using SQL to extract executive-level business insights.
+
+---
 
 ## 📊 Dataset
-Online Retail transactional dataset containing:
-- InvoiceNo
-- StockCode
-- Description
-- Quantity
-- InvoiceDate
-- UnitPrice
-- CustomerID
-- Country
+Online Retail transactional dataset (~541,000 records) containing:
 
-Link: https://archive.ics.uci.edu/dataset/352/online+retail
+- InvoiceNo  
+- StockCode  
+- Description  
+- Quantity  
+- InvoiceDate  
+- UnitPrice  
+- CustomerID  
+- Country  
 
-## 🔍 Business Questions Answered
+Source: https://archive.ics.uci.edu/dataset/352/online+retail
+
+---
+
+## 🔍 Business Questions Addressed
 1. What is the total revenue generated?
 2. How does revenue trend month-over-month?
 3. Which countries generate the highest revenue?
 4. What are the top 10 revenue-generating products?
 5. Who are the top 10 customers by total spending?
 
-## 🛠 SQL Skills Demonstrated
-- Aggregation (SUM)
-- GROUP BY
-- Date functions (DATE_TRUNC)
-- Revenue KPI construction
-- Data cleaning using filters
+---
 
-## 📈 Key Insights
-- Revenue shows clear monthly seasonality trends.
-- Sales are concentrated in a small number of geographic regions.
-- A limited set of products drive a disproportionate share of total revenue.
-- Revenue contribution is concentrated among high-value customers.
+## 🛠 SQL Skills Demonstrated
+- Revenue KPI construction (`quantity × unitprice`)
+- Aggregation using `SUM`
+- Data segmentation using `GROUP BY`
+- Time-based trend analysis using `DATE_TRUNC`
+- Data cleaning with filtering logic (`quantity > 0`, `unitprice > 0`)
+- Business-focused metric interpretation
+
+---
+
+## 📈 Key Business Insights
+
+- Total revenue generated: **£10.66M**
+- Revenue peaked in **November 2011 (£1.50M)**, indicating strong seasonal holiday demand.
+- The **United Kingdom accounts for ~85%+ of total revenue**, showing significant geographic concentration.
+- A small group of SKUs drive a disproportionate share of total revenue.
+- Top customers contribute substantially to overall sales, highlighting revenue concentration among high-value accounts.
+
+---
 
 ## 🧠 Tools Used
-- PostgreSQL
-- pgAdmin
+- PostgreSQL  
+- pgAdmin  
